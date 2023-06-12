@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+
+#root {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  user-select: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.app {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+}
