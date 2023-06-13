@@ -5,7 +5,7 @@ import twitteLogo from "../assets/images/icon-twitter.svg";
 import linkedinLogo from "../assets/images/icon-linkedin.svg";
 
 
-const NavigationContainer = styled.div`
+export const NavigationContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;

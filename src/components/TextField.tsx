@@ -61,15 +61,16 @@ const ErrorContainer = styled.div`
 
 export function TextField(props: {
     placeholder: string, 
+    value: string,
+    handleChange: (text: string) => void,
     validation: any
 }) {
-    const [value, setValue] = useState('');
     const [hasError, setHasError] = useState(false);
 
     // todo add in logic to validate form data
     return (
         <InputContainer hasError={hasError}>
-            <Input type='text' placeholder={props.placeholder} value={value} onChange={(e) => setValue(e.target.value)}/>
+            <Input type='text' placeholder={props.placeholder} value={props.value} onChange={(e) => props.handleChange(e.target.value)}/>
             <Line />
             {hasError && (
                 <ErrorContainer>Sorry, invalid format here</ErrorContainer>
