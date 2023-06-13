@@ -7,4 +7,5 @@ export const HeadingXL = styled.h1`
     line-height: 88px;
     letter-spacing: -2.5px;
     color: #FFFFFF;
+    margin: 0;
 `

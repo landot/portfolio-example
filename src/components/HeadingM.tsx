@@ -6,4 +6,5 @@ export const HeadingM = styled.h3`
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;
+    margin: 0;
 `
