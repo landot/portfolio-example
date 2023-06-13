@@ -16,6 +16,8 @@ export const Primary: Story = {
   args: {
     name: 'Project Number 1',
     skills: ['Java', 'MySQL', 'Test'],
+    projectUrl: '',
+    codeUrl: '',
     src: 'src/assets/images/thumbnail-project-1-large.webp',
     alt: 'test alt'
   },
