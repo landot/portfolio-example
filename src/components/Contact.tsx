@@ -50,7 +50,7 @@ const ContactContainer = styled.div`
         grid-area: footer;
     }
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
         grid-template-areas:
         "contactMessage"
         "sendMessage"

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonText = styled.p`
+export const ButtonText = styled.p`
     margin: 0 0 10px 0;
     font-style: normal;
     font-weight: 700;
@@ -9,6 +9,7 @@ const ButtonText = styled.p`
     letter-spacing: 2.28571px;
     color: #FFFFFF;
     text-transform: uppercase;
+    white-space: nowrap;
 `
 
 const ButtonContainer = styled.div`
@@ -26,7 +27,7 @@ const ButtonContainer = styled.div`
     }
 `
 
-const Line = styled.div`
+export const Line = styled.div`
     width: 100%;
     height: 2px;
     background: #4EE1A0;

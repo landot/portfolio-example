@@ -6,6 +6,7 @@ import linkedinLogo from "../assets/images/icon-linkedin.svg";
 
 
 export const NavigationContainer = styled.div`
+    z-index: 2;
     width: 100%;
     display: flex;
     justify-content: space-between;
