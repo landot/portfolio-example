@@ -33,6 +33,7 @@ const ContactContainer = styled.div`
     grid-template-areas:
     "contactMessage sendMessage"
     "footer footer";
+    column-gap: 20px;
 
     ${SendMessage} {
         z-index: 2;
