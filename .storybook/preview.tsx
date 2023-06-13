@@ -12,7 +12,7 @@ export const decorators = [
       <div id='storybook-containers' style={{
         backgroundColor: 'black',
         width: '100%',
-        maxWidth: '800px',
+        maxWidth: '1200px',
         height: '100dvh',
         display: 'flex',
         justifyContent: 'center',

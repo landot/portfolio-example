@@ -21,6 +21,7 @@ const ContactMessage = styled.div`
 `
 
 const ContactContainer = styled.div`
+    z-index: 2;
     position: relative;
     padding: 80px 160px;
     background: #242424;
@@ -34,14 +35,17 @@ const ContactContainer = styled.div`
     "footer footer";
 
     ${SendMessage} {
+        z-index: 2;
         grid-area: sendMessage;
     }
 
     ${ContactMessage} {
+        z-index: 2;
         grid-area: contactMessage;
     }
 
     ${NavigationContainer} {
+        z-index: 2;
         grid-area: footer;
     }
 
@@ -57,8 +61,9 @@ const ContactContainer = styled.div`
 
 const Rings = styled.img`
     position: absolute;
-    left: -40%;
-    top: 60%;
+    z-index: 1;
+    left: -300px;
+    bottom: 100px;
 `
 
 
