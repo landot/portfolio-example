@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Space Grotesk";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500 700;
   src: url("./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
 }
 
@@ -17,6 +17,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+input, textarea, button {font-family: inherit}
 
 img {
   user-select: none;

@@ -5,8 +5,9 @@ import { HeadingXL } from "./HeadingXL";
 import { NavigationContainer, NavigationMenu } from "./NavigationMenu";
 import { Text } from "./Text";
 import { InputContainer, TextField } from "./TextField";
-import rings from "../assets/images/pattern-rings.svg";
 import { Break, SectionBreak } from "./SectionBreak";
+import { TextAreaField } from "./TextAreaField";
+import rings from "../assets/images/pattern-rings.svg";
 
 
 const SendMessage = styled.div`
@@ -80,8 +81,8 @@ export const ContactContainer = styled.div`
 const Rings = styled.img`
     position: absolute;
     z-index: 1;
-    left: -300px;
-    bottom: 100px;
+    left: -200px;
+    bottom: 200px;
 `
 
 
@@ -98,10 +99,9 @@ export function Contact() {
                 <Text>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</Text>
             </ContactMessage>
             <SendMessage>
-                <TextField placeholder={"Name"} validation={undefined} value={name} handleChange={setName} />
-                <TextField placeholder={"Email"} validation={undefined} value={email} handleChange={setEmail}/>
-                {/* todo turn into textarea later */}
-                <TextField placeholder={"Message"} validation={undefined} value={message} handleChange={setMessage}/>
+                <TextField placeholder={"NAME"} validation={undefined} value={name} handleChange={setName} />
+                <TextField placeholder={"EMAIL"} validation={undefined} value={email} handleChange={setEmail}/>
+                <TextAreaField placeholder={"MESSAGE"} validation={undefined} value={message} handleChange={setMessage}/>
                 <Button text={"Send Message"} href={""} />
             </SendMessage>
             <SectionBreak />

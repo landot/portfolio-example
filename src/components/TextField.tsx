@@ -1,7 +1,7 @@
 import { useState } from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-const Line = styled.div`
+export const Line = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
@@ -9,27 +9,21 @@ const Line = styled.div`
     background: #FFFFFF;
 `
 
-const Input = styled.input`
-background-color: inherit;  
-border: none;
-outline: none;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 26px;
-letter-spacing: -0.222222px;
-color: #FFFFFF;
-margin-left: 24px;
+export const textInputStyle = css`
+    background-color: inherit;  
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.222222px;
+    color: #FFFFFF;
+    margin-left: 24px;
+`
 
-::placeholder,
-::-webkit-input-placeholder {
-    mix-blend-mode: normal;
-    opacity: 0.5;
-}
-:-ms-input-placeholder {
-    mix-blend-mode: normal;
-    opacity: 0.5;
-}
+const Input = styled.input`
+    ${textInputStyle}
 `
 
 export const InputContainer = styled.div<{ hasError?: boolean; }>`
@@ -48,7 +42,7 @@ export const InputContainer = styled.div<{ hasError?: boolean; }>`
     }
 `
 
-const ErrorContainer = styled.div`
+export const ErrorContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     font-weight: 500;

@@ -4,10 +4,31 @@ import { HeadingXL } from "./HeadingXL";
 import { NavigationContainer, NavigationMenu } from "./NavigationMenu";
 import { Text } from "./Text";
 import useWindowSize from "../utils/useWindowSize";
+import rings from "../assets/images/pattern-rings.svg";
+import circle from "../assets/images/pattern-circle.svg";
+
+const Rings = styled.img`
+    position: absolute;
+    z-index: 1;
+    left: -250px;
+    top: 80px;
+`
+
+const Circle = styled.img`
+    position: absolute;
+    width: 130px;
+    z-index: 2;
+    right: 375px;
+    bottom:  75px;
+
+    @media screen and (max-width: 800px) and (min-width: 0px)  {
+        right: -100px;
+    }
+`
 
 const IntroMessage = styled.div`
     z-index: 2;
-    width: 60%;
+    width: 75%;
 
     ${ButtonText} {
         font-size: 88px;
@@ -21,6 +42,7 @@ const IntroMessage = styled.div`
     ${Text} {
         margin-top: 40px;
         margin-bottom: 66px;
+        max-width: 450px;
     }
 `
 
@@ -42,7 +64,7 @@ const IntroContainer = styled.div`
 
 const ProfileImage = styled.img`
     position: absolute;
-    z-index: 0;
+    z-index: 2;
     width: 445px;
     height: 720px;
     right: 0;
@@ -78,13 +100,12 @@ export function Intro() {
             <NavigationMenu />
             <ProfileImage src={`src/assets/images/image-profile-${profilePictureSize}.webp`}/>
             <IntroMessage>
-                <HeadingXL>
-                    Nice to meet you! I'm
-                </HeadingXL>
-                <Button text={"Adam Keyes"} href={""} />
+                <HeadingXL>Nice to meet you! I'm <Button text={"Adam Keyes"} href={""} /></HeadingXL>
                 <Text>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</Text>
             </IntroMessage>
             <Button text={"Contact Me"} href={""} />
+            <Rings src={rings}/>
+            <Circle src={circle}/>
         </IntroContainer>
     )
 }
