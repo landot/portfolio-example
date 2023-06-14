@@ -68,7 +68,6 @@ export function Project(props: IProject) {
                     <Button text={"View Project"} href={props.projectUrl}/>
                     <Button text={"View Code"} href={props.codeUrl}/>
                 </ProjectImageOverlay>
-                {/* todo deal with large vs small image sizes */}
                 <ProjectImage src={props.largeImgSrc} alt={`${props.name} image`}/>
             </ProjectImageContainer>
             <HeadingM>{props.name}</HeadingM>

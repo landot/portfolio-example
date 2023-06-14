@@ -1,6 +1,6 @@
-import { useState } from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Colors } from "../assets/colors"
+import { TextInputStyle } from "../SharedStyles/InputStyle"
 
 export const Line = styled.div`
     margin-top: 10px;
@@ -10,21 +10,8 @@ export const Line = styled.div`
     background: ${Colors.white};
 `
 
-export const textInputStyle = css`
-    background-color: inherit;  
-    border: none;
-    outline: none;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: -0.222222px;
-    color: ${Colors.white};
-    margin-left: 24px;
-`
-
 const Input = styled.input`
-    ${textInputStyle}
+    ${TextInputStyle}
 `
 
 export const InputContainer = styled.div<{ hasError?: boolean; }>`
@@ -58,16 +45,13 @@ export function TextField(props: {
     placeholder: string, 
     value: string,
     handleChange: (text: string) => void,
-    validation: any
+    hasValidationError: boolean
 }) {
-    const [hasError, setHasError] = useState(false);
-
-    // todo add in logic to validate form data
     return (
-        <InputContainer hasError={hasError}>
+        <InputContainer hasError={props.hasValidationError}>
             <Input type='text' placeholder={props.placeholder} value={props.value} onChange={(e) => props.handleChange(e.target.value)}/>
             <Line />
-            {hasError && (
+            {props.hasValidationError && (
                 <ErrorContainer>Sorry, invalid format here</ErrorContainer>
             )}
         </InputContainer>

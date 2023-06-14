@@ -5,7 +5,7 @@ import { ReactComponent as LinkedinLogo } from '../assets/images/icon-linkedin.s
 import { ReactComponent as FrontendMentorLogo } from '../assets/images/icon-frontend-mentor.svg';
 import { Colors } from "../assets/colors";
 
-const Link = ({className, href, children}: {className?: string, href: string, children: any}) => (
+const Link = ({className, href, children}: {className?: string, href: string, children: JSX.Element}) => (
     <a href={href} className={className}>
         {children}
     </a>

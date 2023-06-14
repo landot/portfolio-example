@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import { useState } from "react"
-import { ErrorContainer, InputContainer, Line, textInputStyle } from "./TextField"
+import { ErrorContainer, InputContainer, Line } from "./TextField"
 import { Colors } from "../assets/colors"
+import { TextInputStyle } from "../SharedStyles/InputStyle"
 
 const StyledTextArea = styled.textarea`
     height: 100px;
     resize: none;
-    ${textInputStyle}
+    ${TextInputStyle}
 `
 
 export const TextAreaContainer = styled(InputContainer)<{ hasError?: boolean; }>`
@@ -20,15 +20,13 @@ export function TextAreaField(props: {
     placeholder: string, 
     value: string,
     handleChange: (text: string) => void,
-    validation: any
+    hasValidationError: boolean
 }) {
-    const [hasError, setHasError] = useState(false);
-
     return (
-        <TextAreaContainer hasError={hasError}>
+        <TextAreaContainer hasError={props.hasValidationError}>
             <StyledTextArea placeholder={props.placeholder} onChange={(e) => props.handleChange(e.target.value)}>{props.value}</StyledTextArea>
             <Line />
-            {hasError && (
+            {props.hasValidationError && (
                 <ErrorContainer>Sorry, invalid format here</ErrorContainer>
             )}
         </TextAreaContainer>

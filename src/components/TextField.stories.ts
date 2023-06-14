@@ -15,6 +15,15 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     placeholder: 'NAME',
-    value: ''
+    value: '',
+    hasValidationError: false
+  },
+};
+
+export const ValidationError: Story = {
+  args: {
+    placeholder: 'NAME',
+    value: 'asdfadsf',
+    hasValidationError: true
   },
 };

@@ -2,10 +2,10 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Button, ButtonContainer  } from "./Button";
 import { HeadingXL } from "./HeadingXL";
-import { NavigationContainer, NavigationMenu } from "./NavigationMenu";
+import { NavigationMenu } from "./NavigationMenu";
 import { Text } from "./Text";
 import { InputContainer, TextField } from "./TextField";
-import { Break, SectionBreak } from "./SectionBreak";
+import { SectionBreak } from "./SectionBreak";
 import { TextAreaField } from "./TextAreaField";
 import rings from "../assets/images/pattern-rings.svg";
 import { Colors } from "../assets/colors";
@@ -38,6 +38,7 @@ const ContactMessage = styled.div`
 `
 
 const ContactWrapper = styled.div`
+    position: relative;
     background: ${Colors.lightBlack};
     width: 100dvw;
     display: flex;
@@ -114,9 +115,9 @@ export function Contact() {
                         <Text>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</Text>
                     </ContactMessage>
                     <SendMessage>
-                        <TextField placeholder={"NAME"} validation={undefined} value={name} handleChange={setName} />
-                        <TextField placeholder={"EMAIL"} validation={undefined} value={email} handleChange={setEmail}/>
-                        <TextAreaField placeholder={"MESSAGE"} validation={undefined} value={message} handleChange={setMessage}/>
+                        <TextField placeholder={"NAME"} hasValidationError={false} value={name} handleChange={setName} />
+                        <TextField placeholder={"EMAIL"} hasValidationError={false} value={email} handleChange={setEmail}/>
+                        <TextAreaField placeholder={"MESSAGE"} hasValidationError={false} value={message} handleChange={setMessage}/>
                         <Button text={"Send Message"} href={""} />
                     </SendMessage>
             </ContactContainer>
