@@ -4,9 +4,7 @@ import { Button } from "./Button";
 import { HeadingXL } from "./HeadingXL";
 import { Project } from "./Project";
 
-
 const ProjectsContainer = styled.div`
-    display: grid;
     width: 100%;
     height: 100%;
 `

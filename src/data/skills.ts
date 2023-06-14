@@ -3,7 +3,7 @@ export interface ISkill {
     yearsOfExperience: number;
 }
 
-export const Skills: ISkill[] = [
+export const SkillData: ISkill[] = [
     {
         name: 'HTML',
         yearsOfExperience: 4
