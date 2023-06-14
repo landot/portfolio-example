@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../assets/colors";
 
 export const ButtonText = styled.p`
     margin: 0 0 10px 0;
@@ -7,7 +8,7 @@ export const ButtonText = styled.p`
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 2.28571px;
-    color: #FFFFFF;
+    color: ${Colors.white};
     text-transform: uppercase;
     white-space: nowrap;
 `
@@ -23,19 +24,18 @@ export const ButtonContainer = styled.div`
     background: none;
 
     &:hover ${ButtonText} {{
-        color: #4EE1A0;
+        color: ${Colors.greenAccent};
     }
 `
 
 export const Line = styled.div`
     width: 100%;
     height: 2px;
-    background: #4EE1A0;
+    background: ${Colors.greenAccent};
 `
 
 export function Button(props: {text: string, href: string}) {
     return (
-        // todo send user to href
         <ButtonContainer onClick={() => null}>
             <ButtonText>{props.text}</ButtonText>
             <Line />

@@ -1,12 +1,13 @@
 import { useState } from "react"
 import styled, { css } from "styled-components"
+import { Colors } from "../assets/colors"
 
 export const Line = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
     height: 1px;
-    background: #FFFFFF;
+    background: ${Colors.white};
 `
 
 export const textInputStyle = css`
@@ -18,7 +19,7 @@ export const textInputStyle = css`
     font-size: 16px;
     line-height: 26px;
     letter-spacing: -0.222222px;
-    color: #FFFFFF;
+    color: ${Colors.white};
     margin-left: 24px;
 `
 
@@ -34,11 +35,11 @@ export const InputContainer = styled.div<{ hasError?: boolean; }>`
     flex-direction: column;
 
     ${Line} {
-        background: ${props => props.hasError ? "#FF6F5B" : "#FFFFFF"};
+        background: ${props => props.hasError ? Colors.redAccent : Colors.white};
     }
 
     ${Input}:focus + ${Line} {
-        background: ${props => props.hasError ? "#FF6F5B" : "#4EE1A0"};
+        background: ${props => props.hasError ? Colors.redAccent : Colors.greenAccent};
     }
 `
 
@@ -49,7 +50,7 @@ export const ErrorContainer = styled.div`
     font-size: 12px;
     line-height: 16px;
     letter-spacing: -0.166667px;
-    color: #FF6F5B;
+    color: ${Colors.redAccent};
 `
 
 

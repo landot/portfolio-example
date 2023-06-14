@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 import { Contact, ContactContainer } from './components/Contact'
-import { Intro, IntroMessage } from './components/Intro'
+import { Intro } from './components/Intro'
 import { Projects, ProjectsContainer } from './components/Projects'
 import { Skills, SkillsContainer } from './components/Skills'
 import { Break } from './components/SectionBreak'
+import { Colors } from './assets/colors'
 import './App.css'
-import { HeadingXL } from './components/HeadingXL'
-import { ButtonText } from './components/Button'
 
 
 const AppStyles = styled.div`
-  background-color: #151515;
+  background-color: ${Colors.black};
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -37,18 +36,17 @@ const Content = styled.div`
   }
 `
 
-// todo use themeprovider or a constant file with colors
 function App() {
   return (
     <>
-    <AppStyles>
-      <Content>
-        <Intro />
-        <Break />
-        <Skills />
-        <Projects />
-      </Content>
-    </AppStyles>
+      <AppStyles>
+        <Content>
+          <Intro />
+          <Break />
+          <Skills />
+          <Projects />
+        </Content>
+      </AppStyles>
       <Contact />
     </>
   )
