@@ -122,7 +122,7 @@ export function Intro() {
     return (
         <IntroContainer>
             <NavigationMenu />
-            <ProfileImage src={`src/assets/images/image-profile-${profilePictureSize}.webp`}/>
+            <ProfileImage src={`/assets/images/image-profile-${profilePictureSize}.webp`}/>
             <IntroMessage>
                 <HeadingXL>Nice to meet you! I'm <Button text={"Adam Keyes"} href={""} /></HeadingXL>
                 <Text>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</Text>
