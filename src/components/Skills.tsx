@@ -18,7 +18,7 @@ export const SkillsContainer = styled.div`
     width: 100%;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 330px);
+    grid-template-columns: repeat(auto-fill, 280px);
     grid-auto-rows: 100px;                     
     grid-gap: 30px;  
     justify-content: center;
