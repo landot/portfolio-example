@@ -8,7 +8,7 @@ export interface IProject {
     codeUrl: string;
 }
 
-export const Projects: IProject[] = [
+export const ProjectData: IProject[] = [
     {
         name: 'Design Portfolio',
         skills: ['HTML', 'CSS'],

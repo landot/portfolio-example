@@ -46,6 +46,7 @@ const ProfileImage = styled.img`
         height: 383px;
         position: relative;
         right: 0;
+        top: -100px;
     }
 
     @media screen and (max-width: 800px) and (min-width: 600px)  {

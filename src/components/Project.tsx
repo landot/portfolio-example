@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IProject } from "../data/projects";
 import { Button } from "./Button";
 import { HeadingM } from "./HeadingM";
 import { Text } from "./Text";
@@ -59,14 +60,7 @@ const SkillContainer = styled.div`
     }
 `
 
-export function Project(props: {
-    name: string, 
-    skills: string[],
-    projectUrl: string,
-    codeUrl: string,
-    src: string,
-    alt: string
-}) {
+export function Project(props: IProject) {
     return (
         <ProjectContainer>
             <ProjectImageContainer>
@@ -74,7 +68,8 @@ export function Project(props: {
                     <Button text={"View Project"} href={props.projectUrl}/>
                     <Button text={"View Code"} href={props.codeUrl}/>
                 </ProjectImageOverlay>
-                <ProjectImage src={props.src} alt={props.alt}/>
+                {/* todo deal with large vs small image sizes */}
+                <ProjectImage src={props.largeImgSrc} alt={`${props.name} image`}/>
             </ProjectImageContainer>
             <HeadingM>{props.name}</HeadingM>
             <SkillContainer>
