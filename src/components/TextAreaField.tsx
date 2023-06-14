@@ -3,7 +3,7 @@ import { useState } from "react"
 import { ErrorContainer, InputContainer, Line, textInputStyle } from "./TextField"
 
 const StyledTextArea = styled.textarea`
-    height: 150px;
+    height: 100px;
     resize: none;
     ${textInputStyle}
 `

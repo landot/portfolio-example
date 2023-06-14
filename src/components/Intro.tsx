@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, ButtonText, Line } from "./Button";
+import { Button, ButtonContainer, ButtonText, Line } from "./Button";
 import { HeadingXL } from "./HeadingXL";
 import { NavigationContainer, NavigationMenu } from "./NavigationMenu";
 import { Text } from "./Text";
@@ -44,6 +44,10 @@ export const IntroMessage = styled.div`
         margin-top: 40px;
         margin-bottom: 66px;
         max-width: 450px;
+    }
+
+    ${ButtonContainer} {
+        cursor: default;
     }
 
     @media screen and (max-width: 599px) and (min-width: 0px)  {
