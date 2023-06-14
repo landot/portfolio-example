@@ -35,6 +35,7 @@ export const IntroMessage = styled.div`
         line-height: 88px;
         text-transform: capitalize;
     }
+
     ${Line} {
         height: 6px;
     }
@@ -43,6 +44,20 @@ export const IntroMessage = styled.div`
         margin-top: 40px;
         margin-bottom: 66px;
         max-width: 450px;
+    }
+
+    @media screen and (max-width: 599px) and (min-width: 0px)  {
+        ${ButtonText} {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+
+    @media screen and (max-width: 800px) and (min-width: 600px)  {
+        ${ButtonText} {
+            font-size: 72px;
+            line-height: 72px;
+        }
     }
 `
 
@@ -57,8 +72,9 @@ const IntroContainer = styled.div`
         margin-bottom: 120px;
     }
 
-    @media screen and (max-width: 600px) and (min-width: 0px)  {
+    @media screen and (max-width: 599px) and (min-width: 0px)  {
         align-items: center;
+        height: fit-content;
     }
 
     @media screen and (max-width: 800px) and (min-width: 600px)  {
@@ -74,7 +90,7 @@ const ProfileImage = styled.img`
     right: 0;
     top: -40px;
 
-    @media screen and (max-width: 600px) and (min-width: 0px)  {
+    @media screen and (max-width: 599px) and (min-width: 0px)  {
         width: 174px;
         height: 383px;
         position: relative;

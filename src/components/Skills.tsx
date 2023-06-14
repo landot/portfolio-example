@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import { SkillData } from '../data/skills';
-import { Skill } from "./Skill";
+import { Skill, SkillContainer } from "./Skill";
 import rings from "../assets/images/pattern-rings.svg";
+import { HeadingL } from "./HeadlingL";
 
 
 const Rings = styled.img`
@@ -17,11 +18,29 @@ export const SkillsContainer = styled.div`
     width: 100%;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 345px);
+    grid-template-columns: repeat(auto-fill, 330px);
     grid-auto-rows: 100px;                     
     grid-gap: 30px;  
     justify-content: center;
     align-content: center;
+
+    @media screen and (max-width: 599px) and (min-width: 0px)  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        ${HeadingL} {
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+    }
+
+    @media screen and (max-width: 800px) and (min-width: 600px)  {
+        grid-gap: 7px;  
+    }
 `
 
 export function Skills() {

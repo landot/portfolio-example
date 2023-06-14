@@ -35,20 +35,6 @@ const Content = styled.div`
   ${ContactContainer} {
     margin-top: 140px;
   }
-
-  @media screen and (max-width: 600px) and (min-width: 0px)  {
-    ${HeadingXL} {
-      font-size: 72px;
-      line-height: 72px;
-    }
-  }
-
-  @media screen and (max-width: 800px) and (min-width: 600px)  {
-    ${HeadingXL}, ${IntroMessage} ${ButtonText} {
-      font-size: 72px;
-      line-height: 72px;
-    }
-  }
 `
 
 // todo use themeprovider or a constant file with colors

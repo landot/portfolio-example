@@ -34,7 +34,8 @@ export const ContactContainer = styled.div`
     width: 100dvw;
     height: fit-content;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    justify-content: center;
+    grid-template-columns: minmax(360px, 600px) minmax(360px, 600px);
     grid-template-rows: 1fr 10px 40px;
     grid-template-areas:
     "contactMessage sendMessage"
@@ -94,18 +95,18 @@ export function Contact() {
 
     return (
         <ContactContainer>
-            <ContactMessage>
-                <HeadingXL>Contact</HeadingXL>
-                <Text>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</Text>
-            </ContactMessage>
-            <SendMessage>
-                <TextField placeholder={"NAME"} validation={undefined} value={name} handleChange={setName} />
-                <TextField placeholder={"EMAIL"} validation={undefined} value={email} handleChange={setEmail}/>
-                <TextAreaField placeholder={"MESSAGE"} validation={undefined} value={message} handleChange={setMessage}/>
-                <Button text={"Send Message"} href={""} />
-            </SendMessage>
-            <SectionBreak />
-            <NavigationMenu />
+                <ContactMessage>
+                    <HeadingXL>Contact</HeadingXL>
+                    <Text>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</Text>
+                </ContactMessage>
+                <SendMessage>
+                    <TextField placeholder={"NAME"} validation={undefined} value={name} handleChange={setName} />
+                    <TextField placeholder={"EMAIL"} validation={undefined} value={email} handleChange={setEmail}/>
+                    <TextAreaField placeholder={"MESSAGE"} validation={undefined} value={message} handleChange={setMessage}/>
+                    <Button text={"Send Message"} href={""} />
+                </SendMessage>
+                <SectionBreak />
+                <NavigationMenu />
             <Rings src={rings}/>
         </ContactContainer>
     )

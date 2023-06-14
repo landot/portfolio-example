@@ -12,7 +12,7 @@ export const NavigationContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 600px) {
+    @media (max-width: 599px) {
         flex-direction: column;
         justify-content: flex-start;
     }
