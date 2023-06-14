@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { HeadingXL } from "./HeadingXL";
 import { Project } from "./Project";
 
-const ProjectsContainer = styled.div`
+export const ProjectsContainer = styled.div`
     width: 100%;
     height: fit-content;
 `
@@ -19,8 +19,7 @@ const ProjectsHeader = styled.div`
 const ProjectGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, 540px);
-    grid-auto-rows: 500px;                     
-    grid-gap: 30px;  
+    grid-gap: 70px 30px;  
     justify-content: center;
     align-content: center;
 `

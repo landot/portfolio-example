@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { SkillData } from '../data/skills';
 import { Skill } from "./Skill";
 
-const SkillsContainer = styled.div`
+export const SkillsContainer = styled.div`
     z-index: 2;
     width: 100%;
     height: fit-content;

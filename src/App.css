@@ -9,6 +9,7 @@
   font-family: 'Space Grotesk', sans-serif;
   width: 100dvw;
   height: 100dvh;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {

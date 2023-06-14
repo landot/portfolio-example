@@ -1,17 +1,17 @@
 import styled from 'styled-components'
-import { Contact } from './components/Contact'
+import { Contact, ContactContainer } from './components/Contact'
 import { Intro } from './components/Intro'
-import { Projects } from './components/Projects'
-import { Skills } from './components/Skills'
+import { Projects, ProjectsContainer } from './components/Projects'
+import { Skills, SkillsContainer } from './components/Skills'
+import { Break } from './components/SectionBreak'
 import './App.css'
 
 
 const AppStyles = styled.div`
-  height: 100dvh;
-  width: 100dvw;
   background-color: #151515;
   display: flex;
   justify-content: center;
+  padding: 40px;
 `
 
 const Content = styled.div`
@@ -21,19 +21,34 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   max-width: 1200px;
+
+  ${SkillsContainer} {
+    margin-top: 72px;
+  }
+
+  ${ProjectsContainer} {
+    margin-top: 140px;
+  }
+
+  ${ContactContainer} {
+    margin-top: 140px;
+  }
 `
 
 // todo use themeprovider or a constant file with colors
 function App() {
   return (
+    <>
     <AppStyles>
       <Content>
         <Intro />
+        <Break />
         <Skills />
         <Projects />
-        <Contact />
       </Content>
     </AppStyles>
+      <Contact />
+    </>
   )
 }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Button, ButtonText, Line } from "./Button";
 import { HeadingXL } from "./HeadingXL";
-import { NavigationMenu } from "./NavigationMenu";
+import { NavigationContainer, NavigationMenu } from "./NavigationMenu";
 import { Text } from "./Text";
 import useWindowSize from "../utils/useWindowSize";
 
@@ -29,8 +29,11 @@ const IntroContainer = styled.div`
     flex-direction: column;
     position: relative;
     width: 100%;
-    height: 850px;
-    margin-bottom: 300px;
+    height: 680px;
+    margin-bottom: 100px;
+    ${NavigationContainer} {
+        margin-bottom: 120px;
+    }
 
     @media screen and (max-width: 600px) and (min-width: 0px)  {
         align-items: center;
@@ -43,6 +46,7 @@ const ProfileImage = styled.img`
     width: 445px;
     height: 720px;
     right: 0;
+    top: -40px;
 
     @media screen and (max-width: 600px) and (min-width: 0px)  {
         width: 174px;

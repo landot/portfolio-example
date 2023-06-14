@@ -1,17 +1,22 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Button } from "./Button";
+import { Button, ButtonContainer  } from "./Button";
 import { HeadingXL } from "./HeadingXL";
 import { NavigationContainer, NavigationMenu } from "./NavigationMenu";
 import { Text } from "./Text";
 import { TextField } from "./TextField";
 import rings from "../assets/images/pattern-rings.svg";
+import { Break, SectionBreak } from "./SectionBreak";
 
 
 const SendMessage = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    ${ButtonContainer} {
+        margin-top: 32px;
+    }
 `
 
 const ContactMessage = styled.div`
@@ -20,41 +25,49 @@ const ContactMessage = styled.div`
     }
 `
 
-const ContactContainer = styled.div`
+export const ContactContainer = styled.div`
     z-index: 2;
     position: relative;
     padding: 80px 160px;
     background: #242424;
-    width: 100%;
+    width: 100dvw;
     height: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 10px 40px;
     grid-template-areas:
     "contactMessage sendMessage"
+    "lineBreak lineBreak"
     "footer footer";
     column-gap: 20px;
 
     ${SendMessage} {
         z-index: 2;
         grid-area: sendMessage;
+        margin-bottom: 90px;
     }
 
     ${ContactMessage} {
         z-index: 2;
         grid-area: contactMessage;
+        margin-bottom: 90px;
     }
 
     ${NavigationContainer} {
         z-index: 2;
         grid-area: footer;
+        margin-top: 45px;
+    }
+
+    ${Break} {
+        grid-area: lineBreak;
     }
 
     @media screen and (max-width: 800px) {
         grid-template-areas:
         "contactMessage"
         "sendMessage"
-        "asdf"
+        "lineBreak"
         "footer";
         grid-template-columns: 1fr; 
     }
@@ -87,7 +100,7 @@ export function Contact() {
                 <TextField placeholder={"Message"} validation={undefined} value={message} handleChange={setMessage}/>
                 <Button text={"Send Message"} href={""} />
             </SendMessage>
-            {/* todo add line break */}
+            <SectionBreak />
             <NavigationMenu />
             <Rings src={rings}/>
         </ContactContainer>

@@ -12,7 +12,7 @@ export const ButtonText = styled.p`
     white-space: nowrap;
 `
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
     width: fit-content;
     height: fit-content;
     cursor: pointer;
