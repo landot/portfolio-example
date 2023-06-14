@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { HeadingL } from "./HeadlingL"
 import { Text } from "./Text"
 
-const SkillContainer = styled.div`
+export const SkillContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-content: flex-start;

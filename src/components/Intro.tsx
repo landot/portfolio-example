@@ -28,6 +28,9 @@ const IntroContainer = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
+    height: 850px;
+    margin-bottom: 300px;
 
     @media screen and (max-width: 600px) and (min-width: 0px)  {
         align-items: center;
@@ -39,7 +42,7 @@ const ProfileImage = styled.img`
     z-index: 0;
     width: 445px;
     height: 720px;
-    right: -100px;
+    right: 0;
 
     @media screen and (max-width: 600px) and (min-width: 0px)  {
         width: 174px;
