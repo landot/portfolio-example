@@ -29,7 +29,7 @@ const Links = styled.nav`
 `
 
 export const NavigationContainer = styled.div`
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     display: flex;
     justify-content: space-between;
