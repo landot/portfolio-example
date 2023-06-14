@@ -32,7 +32,7 @@ margin-left: 24px;
 }
 `
 
-const InputContainer = styled.div<{ hasError?: boolean; }>`
+export const InputContainer = styled.div<{ hasError?: boolean; }>`
     background-color: inherit;
     width: 100%;
     height: fit-content;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import githubLogo from "../assets/images/icon-github.svg";
-import frontendMentorLogo from "../assets/images/icon-frontend-mentor.svg";
-import twitteLogo from "../assets/images/icon-twitter.svg";
-import linkedinLogo from "../assets/images/icon-linkedin.svg";
+import { ReactComponent as GithubLogo } from '../assets/images/icon-github.svg';
+import { ReactComponent as TwitteLogo } from '../assets/images/icon-twitter.svg';
+import { ReactComponent as LinkedinLogo } from '../assets/images/icon-linkedin.svg';
+import { ReactComponent as FrontendMentorLogo } from '../assets/images/icon-frontend-mentor.svg';
 
 
 export const NavigationContainer = styled.div`
@@ -28,6 +28,10 @@ const StyledLink = styled(Link)`
     width: 24px;
     height: 24px;
     margin: 0 16px;
+
+    &:hover svg {
+        fill: #4EE1A0;
+    }
 `
 
 const Links = styled.nav`
@@ -53,16 +57,16 @@ export function NavigationMenu() {
             <PortfolioName>adamkeyes</PortfolioName>
             <Links>
                 <StyledLink href="">
-                    <img src={githubLogo} alt="github icon" />
+                    <GithubLogo fill='#FFFFFF'/>
                 </StyledLink>
                 <StyledLink href="">
-                    <img src={frontendMentorLogo} alt="frontend mentor icon" />
+                    <FrontendMentorLogo fill='#FFFFFF'/>
                 </StyledLink>
                 <StyledLink href="">
-                    <img src={linkedinLogo} alt="LinkedIn icon" />
+                    <LinkedinLogo fill='#FFFFFF' />
                 </StyledLink>
                 <StyledLink href="">
-                    <img src={twitteLogo} alt="twitter icon" />
+                    <TwitteLogo fill='#FFFFFF' />
                 </StyledLink>
             </Links>
         </NavigationContainer>

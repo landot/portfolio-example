@@ -4,7 +4,7 @@ import { Button, ButtonContainer  } from "./Button";
 import { HeadingXL } from "./HeadingXL";
 import { NavigationContainer, NavigationMenu } from "./NavigationMenu";
 import { Text } from "./Text";
-import { TextField } from "./TextField";
+import { InputContainer, TextField } from "./TextField";
 import rings from "../assets/images/pattern-rings.svg";
 import { Break, SectionBreak } from "./SectionBreak";
 
@@ -61,6 +61,10 @@ export const ContactContainer = styled.div`
 
     ${Break} {
         grid-area: lineBreak;
+    }
+
+    ${InputContainer}:not(:first-child) {
+        margin-top: 32px;
     }
 
     @media screen and (max-width: 800px) {
