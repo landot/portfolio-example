@@ -1,17 +1,19 @@
 import styled from 'styled-components'
 import { Contact, ContactContainer } from './components/Contact'
-import { Intro } from './components/Intro'
+import { Intro, IntroMessage } from './components/Intro'
 import { Projects, ProjectsContainer } from './components/Projects'
 import { Skills, SkillsContainer } from './components/Skills'
 import { Break } from './components/SectionBreak'
 import './App.css'
+import { HeadingXL } from './components/HeadingXL'
+import { ButtonText } from './components/Button'
 
 
 const AppStyles = styled.div`
   background-color: #151515;
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
 `
 
 const Content = styled.div`
@@ -32,6 +34,20 @@ const Content = styled.div`
 
   ${ContactContainer} {
     margin-top: 140px;
+  }
+
+  @media screen and (max-width: 600px) and (min-width: 0px)  {
+    ${HeadingXL} {
+      font-size: 72px;
+      line-height: 72px;
+    }
+  }
+
+  @media screen and (max-width: 800px) and (min-width: 600px)  {
+    ${HeadingXL}, ${IntroMessage} ${ButtonText} {
+      font-size: 72px;
+      line-height: 72px;
+    }
   }
 `
 

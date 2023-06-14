@@ -26,7 +26,7 @@ const Circle = styled.img`
     }
 `
 
-const IntroMessage = styled.div`
+export const IntroMessage = styled.div`
     z-index: 2;
     width: 75%;
 
@@ -59,6 +59,10 @@ const IntroContainer = styled.div`
 
     @media screen and (max-width: 600px) and (min-width: 0px)  {
         align-items: center;
+    }
+
+    @media screen and (max-width: 800px) and (min-width: 600px)  {
+        height: 600px;
     }
 `
 

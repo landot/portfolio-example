@@ -18,10 +18,14 @@ const ProjectsHeader = styled.div`
 
 const ProjectGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, 540px);
+    grid-template-columns: repeat(auto-fit, minmax(max(340px, 45%), 2fr));
     grid-gap: 70px 30px;  
     justify-content: center;
     align-content: center;
+
+    @media screen and (max-width: 800px) and (min-width: 0px)  {
+        grid-gap: 60px 24px;  
+    }
 `
 
 export function Projects() {
