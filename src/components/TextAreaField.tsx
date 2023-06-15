@@ -9,7 +9,11 @@ export function TextAreaField(props: {
 }) {
     return (
         <TextAreaContainer hasError={props.hasValidationError}>
-            <StyledTextArea placeholder={props.placeholder} onChange={(e) => props.handleChange(e.target.value)}>{props.value}</StyledTextArea>
+            <StyledTextArea 
+                placeholder={props.placeholder} 
+                onChange={(e) => props.handleChange(e.target.value)}
+                value={props.value}
+            />
             <Line />
             {props.hasValidationError && (
                 <ErrorContainer>Sorry, invalid format here</ErrorContainer>

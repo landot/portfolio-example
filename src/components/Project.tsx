@@ -16,8 +16,8 @@ export function Project(props: IProject) {
             </ProjectImageContainer>
             <HeadingM>{props.name}</HeadingM>
             <SkillContainer>
-                {props.skills.map(skill => (
-                    <PageText>{skill}</PageText>
+                {props.skills.map((skill, index) => (
+                    <PageText key={`${skill}-${index}`}>{skill}</PageText>
                 ))}
             </SkillContainer>
         </ProjectContainer>

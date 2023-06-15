@@ -12,8 +12,8 @@ export function Projects() {
                 <Button text="Contact Me" href="" />
             </ProjectsHeader>
             <ProjectGrid>
-                {ProjectData.map(project => (
-                    <Project {...project} />
+                {ProjectData.map((project, index) => (
+                    <Project {...project} key={`${project.name}-${index}`}/>
                 ))}
             </ProjectGrid>
         </ProjectsContainer>

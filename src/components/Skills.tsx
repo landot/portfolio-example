@@ -7,8 +7,8 @@ import { SkillsContainer } from "./styles/Skills.styles";
 export function Skills() {
     return (
         <SkillsContainer>
-            {SkillData.map(skill => (
-                <Skill {...skill} />
+            {SkillData.map((skill, index) => (
+                <Skill {...skill} key={`${skill.name}-${index}`}/>
             ))}
             <Rings src={rings} />
         </SkillsContainer>
