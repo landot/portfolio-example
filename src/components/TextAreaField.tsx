@@ -1,19 +1,5 @@
-import styled from "styled-components"
-import { ErrorContainer, InputContainer, Line } from "./TextField"
-import { TextInputStyle } from "../SharedStyles/InputStyle"
-
-const StyledTextArea = styled.textarea`
-    height: 100px;
-    resize: none;
-    ${TextInputStyle}
-`
-
-export const TextAreaContainer = styled(InputContainer)<{ hasError?: boolean; }>`
-    ${StyledTextArea}:focus + ${Line} {
-        background: ${props => props.hasError ? props => props.theme.colors.redAccent : props => props.theme.colors.greenAccent};
-    }
-`
-
+import { ErrorContainer, Line } from "./styles/TextField.styles";
+import { TextAreaContainer, StyledTextArea } from "./TextAreaField.styles";
 
 export function TextAreaField(props: {
     placeholder: string, 

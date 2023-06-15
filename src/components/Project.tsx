@@ -1,64 +1,8 @@
-import styled from "styled-components";
 import { IProject } from "../data/projects";
 import { Button } from "./Button";
-import { HeadingM } from "./HeadingM";
-import { Text } from "./Text";
-
-const ProjectContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    ${HeadingM} {
-        text-transform: uppercase;
-    }
-`
-
-const ProjectImage = styled.img`
-    max-width: 100%;
-    max-height: 100%;
-    margin-bottom: 20px;
-`
-
-const ProjectImageOverlay = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgb(0, 0, 0, .75);
-    mix-blend-mode: normal;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 48px;
-    align-items: center;
-    visibility: hidden;
-`
-
-const ProjectImageContainer = styled.div`
-    width: fit-content;
-    height: fit-content;
-    position: relative;
-
-
-    &:hover ${ProjectImageOverlay} {
-        visibility: visible;
-    }
-`
-
-const SkillContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin-top: 7px;
-
-    ${Text} {
-        margin-right: 18px;
-        text-transform: uppercase;
-    }
-`
+import { HeadingM } from "./styles/HeadingM.styles";
+import { PageText } from "./styles/PageText.styles";
+import { ProjectContainer, ProjectImage, ProjectImageContainer, ProjectImageOverlay, SkillContainer } from "./styles/Project.styles";
 
 export function Project(props: IProject) {
     return (
@@ -73,7 +17,7 @@ export function Project(props: IProject) {
             <HeadingM>{props.name}</HeadingM>
             <SkillContainer>
                 {props.skills.map(skill => (
-                    <Text>{skill}</Text>
+                    <PageText>{skill}</PageText>
                 ))}
             </SkillContainer>
         </ProjectContainer>

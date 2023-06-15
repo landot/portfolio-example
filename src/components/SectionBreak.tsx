@@ -1,10 +1,4 @@
-import styled from "styled-components"
-
-export const Break = styled.div`
-    width: 100%;
-    height: 1px;
-    background: ${props => props.theme.colors.white};
-`
+import { Break } from "./styles/SectionBreak.styles";
 
 export function SectionBreak() {
     return (

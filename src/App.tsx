@@ -1,10 +1,12 @@
 import styled, { ThemeProvider } from 'styled-components';
 import { Contact } from './components/Contact';
 import { Intro } from './components/Intro';
-import { Projects, ProjectsContainer } from './components/Projects';
-import { Skills, SkillsContainer } from './components/Skills';
-import { Break } from './components/SectionBreak';
 import { theme } from './theme';
+import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
+import { ProjectsContainer } from './components/styles/Projects.styles';
+import { Break } from './components/styles/SectionBreak.styles';
+import { SkillsContainer } from './components/styles/Skills.styles';
 import './App.css';
 
 const AppStyles = styled.div`

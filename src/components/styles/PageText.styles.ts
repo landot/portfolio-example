@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Text = styled.p`
+export const PageText = styled.p`
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
