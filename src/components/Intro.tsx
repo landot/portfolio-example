@@ -21,7 +21,7 @@ export function Intro() {
 
     return (
         <IntroContainer>
-            <NavigationMenu />
+            <NavigationMenu location="header" />
             <ProfileImage src={`/assets/images/image-profile-${profilePictureSize}.webp`} alt={'profile picture'}/>
             <IntroMessage>
                 <Heading>Nice to meet you! I'm <Button text={"Adam Keyes"} href={""} /></Heading>

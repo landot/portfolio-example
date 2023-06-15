@@ -15,7 +15,7 @@ export function Contact() {
     const [message, setMessage] = useState('');
 
     return (
-        <ContactWrapper>
+        <ContactWrapper role="form">
             <ContactContainer>
                     <ContactMessage>
                         <Heading>Contact</Heading>
@@ -30,7 +30,7 @@ export function Contact() {
             </ContactContainer>
             <Footer>
                 <SectionBreak />
-                <NavigationMenu />
+                <NavigationMenu location="footer" />
             </Footer>
             <Rings src={rings} alt='decorative rings' aria-hidden="true"/>
         </ContactWrapper>

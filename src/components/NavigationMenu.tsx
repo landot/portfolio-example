@@ -5,13 +5,13 @@ import { ReactComponent as LinkedinLogo } from '../assets/images/icon-linkedin.s
 import { ReactComponent as FrontendMentorLogo } from '../assets/images/icon-frontend-mentor.svg';
 import { NavigationContainer, PortfolioName, Links, StyledLink } from "./styles/NavigationMenu.styles";
 
-export function NavigationMenu() {
+export function NavigationMenu(props: {location: string}) {
     const theme = useTheme();
 
     return (
-        <NavigationContainer>
+        <NavigationContainer aria-label={`${props.location} navigation section`}>
             <PortfolioName>adamkeyes</PortfolioName>
-            <Links aria-label="navigation links">
+            <Links aria-label={`${props.location} navigation links`}>
                 <StyledLink href="" name="github">
                     <GithubLogo fill={theme.colors.white}/>
                 </StyledLink>
