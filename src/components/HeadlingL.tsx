@@ -9,4 +9,10 @@ export const HeadingL = styled.h2`
     letter-spacing: -1.5px;
     color: ${Colors.white};
     margin: 0;
+
+    @media screen and (max-width: 599px) and (min-width: 0px)  {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1px;
+    }
 `

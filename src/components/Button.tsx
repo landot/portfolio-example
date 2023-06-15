@@ -23,7 +23,7 @@ export const ButtonContainer = styled.div`
     align-items: center;
     background: none;
 
-    &:hover ${ButtonText} {{
+    &:hover ${ButtonText} {
         color: ${Colors.greenAccent};
     }
 `

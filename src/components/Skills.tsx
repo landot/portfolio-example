@@ -31,10 +31,7 @@ export const SkillsContainer = styled.div`
         align-items: center;
 
         ${HeadingL} {
-            font-size: 32px;
-            line-height: 40px;
             text-align: center;
-            letter-spacing: -1px;
         }
     }
 
