@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Contact, ContactContainer } from './components/Contact'
+import { Contact } from './components/Contact'
 import { Intro } from './components/Intro'
 import { Projects, ProjectsContainer } from './components/Projects'
 import { Skills, SkillsContainer } from './components/Skills'
@@ -29,11 +29,22 @@ const Content = styled.div`
 
   ${ProjectsContainer} {
     margin-top: 140px;
+    margin-bottom: 140px;
   }
 
-  ${ContactContainer} {
-    margin-top: 140px;
-  }
+  @media screen and (max-width: 599px) and (min-width: 0px)  {
+      ${ProjectsContainer} {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+    }
+
+    @media screen and (max-width: 800px) and (min-width: 600px)  {
+      ${ProjectsContainer} {
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+    }
 `
 
 function App() {

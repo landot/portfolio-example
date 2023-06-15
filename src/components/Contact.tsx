@@ -57,7 +57,7 @@ const Footer = styled.div`
     margin: 60px 0;
 `
 
-export const ContactContainer = styled.div`
+const ContactContainer = styled.div`
     z-index: 2;
     position: relative;
     padding: 80px 50px 0 50px;
