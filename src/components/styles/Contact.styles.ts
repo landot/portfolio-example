@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ButtonContainer } from "./Button.styles";
-import { HeadingXL } from "./HeadingXL.styles";
+import { Heading } from "./Heading.styles";
 import { PageText } from "./PageText.styles";
 import { InputContainer } from "./TextField.styles";
 
@@ -15,7 +15,7 @@ export const SendMessage = styled.div`
 `
 
 export const ContactMessage = styled.div`
-    ${HeadingXL} {
+    ${Heading} {
         margin-bottom: 36px;
     }
 

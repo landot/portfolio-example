@@ -1,14 +1,14 @@
 import { ProjectData } from "../data/projects";
 import { Button } from "./Button";
 import { Project } from "./Project";
-import { HeadingXL } from "./styles/HeadingXL.styles";
+import { Heading } from "./styles/Heading.styles";
 import { ProjectGrid, ProjectsContainer, ProjectsHeader } from "./styles/Projects.styles";
 
 export function Projects() {
     return (
         <ProjectsContainer>
             <ProjectsHeader>
-                <HeadingXL>Projects</HeadingXL>
+                <Heading>Projects</Heading>
                 <Button text="Contact Me" href="" />
             </ProjectsHeader>
             <ProjectGrid>

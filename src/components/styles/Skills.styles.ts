@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HeadingL } from "./HeadlingL.styles";
+import { SkillHeader } from "./Skill.styles";
 
 export const Rings = styled.img`
     position: absolute;
@@ -30,7 +30,7 @@ export const SkillsContainer = styled.div`
         justify-content: center;
         align-items: center;
 
-        ${HeadingL} {
+        ${SkillHeader} {
             text-align: center;
         }
     }

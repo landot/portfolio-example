@@ -1,8 +1,7 @@
 import rings from "../assets/images/pattern-rings.svg";
 import { SkillData } from '../data/skills';
 import { Skill } from "./Skill";
-import { Rings } from "./styles/Contact.styles";
-import { SkillsContainer } from "./styles/Skills.styles";
+import { Rings, SkillsContainer } from "./styles/Skills.styles";
 
 export function Skills() {
     return (
@@ -10,7 +9,7 @@ export function Skills() {
             {SkillData.map((skill, index) => (
                 <Skill {...skill} key={`${skill.name}-${index}`}/>
             ))}
-            <Rings src={rings} />
+            <Rings src={rings} alt={'decorative rings'}/>
         </SkillsContainer>
     )
 }

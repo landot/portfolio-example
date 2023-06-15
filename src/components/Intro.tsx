@@ -4,7 +4,7 @@ import { PageText } from "./styles/PageText.styles";
 import useWindowSize from "../utils/useWindowSize";
 import rings from "../assets/images/pattern-rings.svg";
 import circle from "../assets/images/pattern-circle.svg";
-import { HeadingXL } from "./styles/HeadingXL.styles";
+import { Heading } from "./styles/Heading.styles";
 import { Rings } from "./styles/Contact.styles";
 import { IntroContainer, ProfileImage, IntroMessage, Circle } from "./styles/Intro.styles";
 
@@ -22,14 +22,14 @@ export function Intro() {
     return (
         <IntroContainer>
             <NavigationMenu />
-            <ProfileImage src={`/assets/images/image-profile-${profilePictureSize}.webp`}/>
+            <ProfileImage src={`/assets/images/image-profile-${profilePictureSize}.webp`} alt={'profile picture'}/>
             <IntroMessage>
-                <HeadingXL>Nice to meet you! I'm <Button text={"Adam Keyes"} href={""} /></HeadingXL>
+                <Heading>Nice to meet you! I'm <Button text={"Adam Keyes"} href={""} /></Heading>
                 <PageText>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</PageText>
             </IntroMessage>
             <Button text={"Contact Me"} href={""} />
-            <Rings src={rings}/>
-            <Circle src={circle}/>
+            <Rings src={rings} alt={'decorative rings'}/>
+            <Circle src={circle} alt={'decorative circle'}/>
         </IntroContainer>
     )
 }

@@ -1,12 +1,20 @@
 import styled from "styled-components";
-import { HeadingM } from "./HeadingM.styles";
 import { PageText } from "./PageText.styles";
+
+export const ProjectHeader = styled.h2`
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: ${props => props.theme.colors.white};
+    margin: 0;
+`
 
 export const ProjectContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    ${HeadingM} {
+    ${ProjectHeader} {
         text-transform: uppercase;
     }
 `

@@ -6,7 +6,7 @@ import { TextField } from "./TextField";
 import { SectionBreak } from "./SectionBreak";
 import { TextAreaField } from "./TextAreaField";
 import { ContactWrapper, ContactContainer, ContactMessage, SendMessage, Footer, Rings } from "./styles/Contact.styles";
-import { HeadingXL } from "./styles/HeadingXL.styles";
+import { Heading } from "./styles/Heading.styles";
 import rings from "../assets/images/pattern-rings.svg";
 
 export function Contact() {
@@ -15,10 +15,10 @@ export function Contact() {
     const [message, setMessage] = useState('');
 
     return (
-        <ContactWrapper>
+        <ContactWrapper role='footer'>
             <ContactContainer>
                     <ContactMessage>
-                        <HeadingXL>Contact</HeadingXL>
+                        <Heading>Contact</Heading>
                         <PageText>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</PageText>
                     </ContactMessage>
                     <SendMessage>
@@ -32,7 +32,7 @@ export function Contact() {
                 <SectionBreak />
                 <NavigationMenu />
             </Footer>
-            <Rings src={rings}/>
+            <Rings src={rings} alt={'decorative rings'}/>
         </ContactWrapper>
     )
 }

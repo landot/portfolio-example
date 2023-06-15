@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeadingXL = styled.h1`
+export const Heading = styled.h1`
     font-style: normal;
     font-weight: 700;
     font-size: 88px;
