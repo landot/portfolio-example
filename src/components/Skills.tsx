@@ -1,7 +1,7 @@
 import styled from "styled-components"
+import rings from "../assets/images/pattern-rings.svg";
 import { SkillData } from '../data/skills';
 import { Skill } from "./Skill";
-import rings from "../assets/images/pattern-rings.svg";
 import { HeadingL } from "./HeadlingL";
 
 

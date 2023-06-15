@@ -8,7 +8,6 @@ import { InputContainer, TextField } from "./TextField";
 import { SectionBreak } from "./SectionBreak";
 import { TextAreaField } from "./TextAreaField";
 import rings from "../assets/images/pattern-rings.svg";
-import { Colors } from "../assets/colors";
 
 
 const SendMessage = styled.div`
@@ -39,7 +38,7 @@ const ContactMessage = styled.div`
 
 const ContactWrapper = styled.div`
     position: relative;
-    background: ${Colors.lightBlack};
+    background: ${props => props.theme.colors.lightBlack};
     width: 100dvw;
     display: flex;
     flex-direction: column;

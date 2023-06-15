@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { ErrorContainer, InputContainer, Line } from "./TextField"
-import { Colors } from "../assets/colors"
 import { TextInputStyle } from "../SharedStyles/InputStyle"
 
 const StyledTextArea = styled.textarea`
@@ -11,7 +10,7 @@ const StyledTextArea = styled.textarea`
 
 export const TextAreaContainer = styled(InputContainer)<{ hasError?: boolean; }>`
     ${StyledTextArea}:focus + ${Line} {
-        background: ${props => props.hasError ? Colors.redAccent : Colors.greenAccent};
+        background: ${props => props.hasError ? props => props.theme.colors.redAccent : props => props.theme.colors.greenAccent};
     }
 `
 

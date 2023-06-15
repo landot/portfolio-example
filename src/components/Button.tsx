@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Colors } from "../assets/colors";
 
 export const ButtonText = styled.p`
     margin: 0 0 10px 0;
@@ -8,7 +7,7 @@ export const ButtonText = styled.p`
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 2.28571px;
-    color: ${Colors.white};
+    color: ${props => props.theme.colors.white};
     text-transform: uppercase;
     white-space: nowrap;
 `
@@ -24,14 +23,14 @@ export const ButtonContainer = styled.div`
     background: none;
 
     &:hover ${ButtonText} {
-        color: ${Colors.greenAccent};
+        color: ${props => props.theme.colors.greenAccent};
     }
 `
 
 export const Line = styled.div`
     width: 100%;
     height: 2px;
-    background: ${Colors.greenAccent};
+    background: ${props => props.theme.colors.greenAccent};
 `
 
 export function Button(props: {text: string, href: string}) {

@@ -1,21 +1,14 @@
-import styled, { ThemeProvider } from 'styled-components'
-import { Contact } from './components/Contact'
-import { Intro } from './components/Intro'
-import { Projects, ProjectsContainer } from './components/Projects'
-import { Skills, SkillsContainer } from './components/Skills'
-import { Break } from './components/SectionBreak'
-import { Colors } from './assets/colors'
-import './App.css'
-
-const theme = {
-  viewports: {
-    mobile: '600px',
-    tablet: '800px',
-  }
-};
+import styled, { ThemeProvider } from 'styled-components';
+import { Contact } from './components/Contact';
+import { Intro } from './components/Intro';
+import { Projects, ProjectsContainer } from './components/Projects';
+import { Skills, SkillsContainer } from './components/Skills';
+import { Break } from './components/SectionBreak';
+import { theme } from './theme';
+import './App.css';
 
 const AppStyles = styled.div`
-  background-color: ${Colors.black};
+  background-color: ${props => props.theme.colors.black};
   display: flex;
   justify-content: center;
   padding: 30px;

@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Colors } from "../assets/colors"
 import { TextInputStyle } from "../SharedStyles/InputStyle"
 
 export const Line = styled.div`
@@ -7,7 +6,7 @@ export const Line = styled.div`
     margin-bottom: 10px;
     width: 100%;
     height: 1px;
-    background: ${Colors.white};
+    background: ${props => props.theme.colors.white};
 `
 
 const Input = styled.input`
@@ -22,11 +21,11 @@ export const InputContainer = styled.div<{ hasError?: boolean; }>`
     flex-direction: column;
 
     ${Line} {
-        background: ${props => props.hasError ? Colors.redAccent : Colors.white};
+        background: ${props => props.hasError ? props => props.theme.colors.redAccent : props => props.theme.colors.white};
     }
 
     ${Input}:focus + ${Line} {
-        background: ${props => props.hasError ? Colors.redAccent : Colors.greenAccent};
+        background: ${props => props.hasError ? props => props.theme.colors.redAccent : props => props.theme.colors.greenAccent};
     }
 `
 
@@ -37,7 +36,7 @@ export const ErrorContainer = styled.div`
     font-size: 12px;
     line-height: 16px;
     letter-spacing: -0.166667px;
-    color: ${Colors.redAccent};
+    color: ${props => props.theme.colors.redAccent};
 `
 
 

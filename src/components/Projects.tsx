@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ProjectData, TimProjectData } from "../data/projects";
+import { ProjectData } from "../data/projects";
 import { Button } from "./Button";
 import { HeadingXL } from "./HeadingXL";
 import { Project } from "./Project";

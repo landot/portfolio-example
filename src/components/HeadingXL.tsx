@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Colors } from "../assets/colors";
 
 export const HeadingXL = styled.h1`
     font-style: normal;
@@ -7,7 +6,7 @@ export const HeadingXL = styled.h1`
     font-size: 88px;
     line-height: 88px;
     letter-spacing: -2.5px;
-    color: ${Colors.white};
+    color: ${props => props.theme.colors.white};
     margin: 0;
     
     @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
