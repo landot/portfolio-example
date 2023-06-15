@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import { Contact } from './components/Contact'
 import { Intro } from './components/Intro'
 import { Projects, ProjectsContainer } from './components/Projects'
@@ -7,6 +7,12 @@ import { Break } from './components/SectionBreak'
 import { Colors } from './assets/colors'
 import './App.css'
 
+const theme = {
+  viewports: {
+    mobile: '600px',
+    tablet: '800px',
+  }
+};
 
 const AppStyles = styled.div`
   background-color: ${Colors.black};
@@ -32,14 +38,14 @@ const Content = styled.div`
     margin-bottom: 140px;
   }
 
-  @media screen and (max-width: 599px) and (min-width: 0px)  {
+  @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
       ${ProjectsContainer} {
         margin-top: 80px;
         margin-bottom: 80px;
       }
     }
 
-    @media screen and (max-width: 800px) and (min-width: 600px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
       ${ProjectsContainer} {
         margin-top: 100px;
         margin-bottom: 100px;
@@ -49,7 +55,7 @@ const Content = styled.div`
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <AppStyles>
         <Content>
           <Intro />
@@ -59,7 +65,7 @@ function App() {
         </Content>
       </AppStyles>
       <Contact />
-    </>
+    </ThemeProvider>
   )
 }
 

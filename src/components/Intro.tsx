@@ -21,7 +21,7 @@ const Circle = styled.img`
     right: 375px;
     bottom:  75px;
 
-    @media screen and (max-width: 800px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
         right: -100px;
     }
 `
@@ -50,19 +50,20 @@ export const IntroMessage = styled.div`
         cursor: default;
     }
 
-    @media screen and (max-width: 599px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
+        ${ButtonText} {
+            font-size: 72px;
+            line-height: 72px;
+        }
+    }
+
+    @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
         ${ButtonText} {
             font-size: 40px;
             line-height: 40px;
         }
     }
 
-    @media screen and (max-width: 800px) and (min-width: 600px)  {
-        ${ButtonText} {
-            font-size: 72px;
-            line-height: 72px;
-        }
-    }
 `
 
 const IntroContainer = styled.div`
@@ -76,14 +77,15 @@ const IntroContainer = styled.div`
         margin-bottom: 120px;
     }
 
-    @media screen and (max-width: 599px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
+        height: 600px;
+    }
+
+    @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
         align-items: center;
         height: fit-content;
     }
 
-    @media screen and (max-width: 800px) and (min-width: 600px)  {
-        height: 600px;
-    }
 `
 
 const ProfileImage = styled.img`
@@ -93,8 +95,13 @@ const ProfileImage = styled.img`
     height: 720px;
     right: 0;
     top: -40px;
+    
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
+        width: 322px;
+        height: 600px;
+    }
 
-    @media screen and (max-width: 599px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
         width: 174px;
         height: 383px;
         position: relative;
@@ -102,10 +109,6 @@ const ProfileImage = styled.img`
         top: -100px;
     }
 
-    @media screen and (max-width: 800px) and (min-width: 600px)  {
-        width: 322px;
-        height: 600px;
-    }
 `
 
 export function Intro() {

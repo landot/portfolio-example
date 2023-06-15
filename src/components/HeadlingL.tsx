@@ -10,7 +10,7 @@ export const HeadingL = styled.h2`
     color: ${Colors.white};
     margin: 0;
 
-    @media screen and (max-width: 599px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -1px;

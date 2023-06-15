@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ProjectData } from "../data/projects";
+import { ProjectData, TimProjectData } from "../data/projects";
 import { Button } from "./Button";
 import { HeadingXL } from "./HeadingXL";
 import { Project } from "./Project";
@@ -23,7 +23,7 @@ const ProjectGrid = styled.div`
     justify-content: center;
     align-content: center;
 
-    @media screen and (max-width: 800px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
         grid-gap: 60px 24px;  
     }
 `

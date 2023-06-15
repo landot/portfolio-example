@@ -9,14 +9,15 @@ export const HeadingXL = styled.h1`
     letter-spacing: -2.5px;
     color: ${Colors.white};
     margin: 0;
+    
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
+        font-size: 72px;
+        line-height: 72px;
+    }
 
-    @media screen and (max-width: 599px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
         font-size: 40px;
         line-height: 40px;
     }
 
-    @media screen and (max-width: 800px) and (min-width: 600px)  {
-        font-size: 72px;
-        line-height: 72px;
-    }
 `

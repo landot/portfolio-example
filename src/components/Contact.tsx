@@ -26,7 +26,7 @@ const ContactMessage = styled.div`
         margin-bottom: 36px;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet}) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -84,7 +84,7 @@ const ContactContainer = styled.div`
         margin-top: 32px;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet}) {
         max-width: 450px;
         grid-template-areas:
         "contactMessage"

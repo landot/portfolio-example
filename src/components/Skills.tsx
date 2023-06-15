@@ -24,7 +24,11 @@ export const SkillsContainer = styled.div`
     justify-content: center;
     align-content: center;
 
-    @media screen and (max-width: 599px) and (min-width: 0px)  {
+    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
+        grid-gap: 7px;  
+    }
+
+    @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -35,9 +39,6 @@ export const SkillsContainer = styled.div`
         }
     }
 
-    @media screen and (max-width: 800px) and (min-width: 600px)  {
-        grid-gap: 7px;  
-    }
 `
 
 export function Skills() {

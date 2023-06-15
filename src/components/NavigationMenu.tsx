@@ -36,7 +36,7 @@ export const NavigationContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 599px) {
+    @media (max-width: ${props => props.theme.viewports.mobile}) {
         flex-direction: column;
         justify-content: flex-start;
 
