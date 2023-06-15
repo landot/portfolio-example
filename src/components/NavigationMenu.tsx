@@ -9,19 +9,19 @@ export function NavigationMenu() {
     const theme = useTheme();
 
     return (
-        <NavigationContainer role="banner">
+        <NavigationContainer>
             <PortfolioName>adamkeyes</PortfolioName>
             <Links aria-label="navigation links">
-                <StyledLink href="" aria-label="github link">
+                <StyledLink href="" name="github">
                     <GithubLogo fill={theme.colors.white}/>
                 </StyledLink>
-                <StyledLink href="" aria-label="frontend mentor link">
+                <StyledLink href="" name="frontend mentor">
                     <FrontendMentorLogo fill={theme.colors.white}/>
                 </StyledLink>
-                <StyledLink href="" aria-label="linkedin link">
+                <StyledLink href="" name="linkedin">
                     <LinkedinLogo fill={theme.colors.white} />
                 </StyledLink>
-                <StyledLink href="" aria-label="twitter link">
+                <StyledLink href="" name="twitter">
                     <TwitterLogo fill={theme.colors.white} />
                 </StyledLink>
             </Links>

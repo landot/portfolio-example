@@ -28,8 +28,8 @@ export function Intro() {
                 <PageText>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</PageText>
             </IntroMessage>
             <Button text={"Contact Me"} href={""} />
-            <Rings src={rings} alt={'decorative rings'}/>
-            <Circle src={circle} alt={'decorative circle'}/>
+            <Rings src={rings} alt='decorative rings' aria-hidden="true"/>
+            <Circle src={circle} alt='decorative circle' aria-hidden="true"/>
         </IntroContainer>
     )
 }

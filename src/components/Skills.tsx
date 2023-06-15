@@ -9,7 +9,7 @@ export function Skills() {
             {SkillData.map((skill, index) => (
                 <Skill {...skill} key={`${skill.name}-${index}`}/>
             ))}
-            <Rings src={rings} alt={'decorative rings'}/>
+            <Rings src={rings} alt='decorative rings' aria-hidden="true"/>
         </SkillsContainer>
     )
 }

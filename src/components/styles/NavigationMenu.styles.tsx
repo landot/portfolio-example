@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Link = ({className, href, children}: {className?: string, href: string, children: JSX.Element}) => (
-    <a href={href} className={className}>
+export const Link = ({className, href, children, name}: {className?: string, href: string, children: JSX.Element, name: string}) => (
+    <a href={href} className={className} aria-label={`link to go to ${name}`}>
         {children}
     </a>
 )
