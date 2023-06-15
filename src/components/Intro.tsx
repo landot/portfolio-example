@@ -24,7 +24,7 @@ export function Intro() {
             <NavigationMenu location="header" />
             <ProfileImage src={`/assets/images/image-profile-${profilePictureSize}.webp`} alt={'profile picture'}/>
             <IntroMessage>
-                <Heading>Nice to meet you! I'm <Button text={"Adam Keyes"} href={""} /></Heading>
+                <Heading>Nice to meet you! I'm <u>Adam Keyes</u>.</Heading>
                 <PageText>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</PageText>
             </IntroMessage>
             <Button text={"Contact Me"} href={""} />

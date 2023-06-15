@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ButtonText, Line, ButtonContainer } from "./Button.styles";
 import { NavigationContainer } from "./NavigationMenu.styles";
 import { PageText } from "./PageText.styles";
 
@@ -24,16 +23,14 @@ export const Circle = styled.img`
 
 export const IntroMessage = styled.div`
     z-index: 2;
-    width: 75%;
+    width: 60%;
 
-    ${ButtonText} {
-        font-size: 88px;
-        line-height: 88px;
-        text-transform: capitalize;
+    u {
+        text-decoration-color: ${props => props.theme.colors.greenAccent};
     }
 
-    ${Line} {
-        height: 6px;
+    u:hover {
+        color: ${props => props.theme.colors.greenAccent};
     }
 
     ${PageText} {
@@ -41,25 +38,6 @@ export const IntroMessage = styled.div`
         margin-bottom: 66px;
         max-width: 450px;
     }
-
-    ${ButtonContainer} {
-        cursor: default;
-    }
-
-    @media screen and (max-width: ${props => props.theme.viewports.tablet})  {
-        ${ButtonText} {
-            font-size: 72px;
-            line-height: 72px;
-        }
-    }
-
-    @media screen and (max-width: ${props => props.theme.viewports.mobile})  {
-        ${ButtonText} {
-            font-size: 40px;
-            line-height: 40px;
-        }
-    }
-
 `
 
 export const IntroContainer = styled.div`
